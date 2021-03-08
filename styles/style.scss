@@ -1,0 +1,297 @@
+@charset "UTF-8";
+
+// 共通
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  font-family: sans-serif;
+  font-size: 16px;
+  color: #2b2b2b;
+}
+
+h1,
+h2,
+h3,
+p {
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  color: #2b2b2b;
+  text-decoration: none;
+}
+
+section {
+  text-align: center;
+}
+
+.u-content-wrapper {
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+// Header
+.header {
+  position: relative;
+  width: 100%;
+  height: 620px;
+  background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),
+    url("../images/header.png");
+  background-size: cover;
+  text-align: center;
+  color: #fff;
+  &__nav {
+    position: absolute;
+    top: 40px;
+    left: 0;
+    width: 100%;
+    height: 64px;
+    &__wrapper {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    &__logo {
+      font-size: 36px;
+    }
+  }
+  &__title {
+    padding-top: 240px;
+    font-size: 120px;
+    font-weight: normal;
+    &__sub {
+      word-spacing: 4px;
+      &::before,
+      &::after {
+        content: "";
+        display: inline-block;
+        width: 12px;
+        height: 2px;
+        margin: 0 8px;
+        background: #fff;
+        vertical-align: center;
+      }
+    }
+  }
+}
+
+.hamburger-menu {
+  position: relative;
+  width: 32px;
+  height: 64px;
+  cursor: pointer;
+  &__line,
+  &__line::before,
+  &__line::after {
+    position: absolute;
+    left: 0;
+    display: block;
+    width: 32px;
+    height: 1px;
+    background-color: #fff;
+  }
+  &__line::before,
+  &__line::after {
+    content: "";
+  }
+  &__line {
+    top: 50%;
+    &::before {
+      top: calc(50% - 8px);
+    }
+    &::after {
+      top: calc(50% + 8px);
+    }
+  }
+}
+
+// Concept
+.u-heading {
+  position: relative;
+  margin-bottom: 32px;
+  padding-bottom: 24px;
+  font-size: 36px;
+  letter-spacing: 2px;
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 40px;
+    height: 1px;
+    background: #2b2b2b;
+    transform: translateX(-50%);
+  }
+}
+
+.u-text {
+  padding-bottom: 40px;
+  line-height: 1.8;
+  letter-spacing: 1.4px;
+}
+
+.concept {
+  width: 100%;
+  padding: 80px 0;
+  background: linear-gradient(#fff 70%, #ededed 30%);
+  &__image {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+  }
+}
+
+// Work
+.work {
+  width: 100%;
+  padding-top: 80px;
+  padding-bottom: 20px;
+  &__content {
+    width: 420px;
+    padding-bottom: 80px;
+    text-align: left;
+    line-height: 1.8;
+    &__image {
+      width: 100%;
+      margin-bottom: 16px;
+    }
+    &__heading {
+      font-size: 24px;
+    }
+    &__text {
+      letter-spacing: 1.5px;
+    }
+    &:nth-of-type(1) {
+      order: 1;
+    }
+    &:nth-of-type(2) {
+      order: 3;
+      margin-top: 120px;
+    }
+    &:nth-of-type(3) {
+      order: 2;
+    }
+    &:nth-of-type(4) {
+      order: 4;
+    }
+  }
+}
+
+.work-contents {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  height: 1680px;
+}
+
+// Florist
+.florist {
+  width: 100%;
+  padding-top: 80px;
+  background: linear-gradient(#ededed 60%, #fff 40%);
+  &__content {
+    width: 300px;
+    padding-bottom: 40px;
+    text-align: left;
+    line-height: 1.8;
+  }
+}
+.florist-contents {
+  display: flex;
+  justify-content: space-between;
+}
+
+// Shop-information
+.shopInformation {
+  width: 100%;
+  padding: 80px 0 120px;
+  th,
+  td {
+    font-weight: normal;
+    padding: 0;
+  }
+
+  &__contents {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  &__image {
+    width: 50%;
+  }
+  &__table {
+    width: 45%;
+    border-spacing: 16px;
+    text-align: left;
+    letter-spacing: 1.5px;
+    line-height: 2;
+    &__heading {
+      width: 25%;
+      border-right: 1px solid #a0a0a0;
+    }
+  }
+}
+tbody {
+  vertical-align: inherit;
+}
+
+// Contact
+.contact {
+  width: 100%;
+  padding: 80px 0;
+  background: linear-gradient(
+      rgba(255, 255, 255, 0.6),
+      rgba(255, 255, 255, 0.6)
+    ),
+    url(../images/contact_us.png);
+  background-size: cover;
+}
+.btn__contact {
+  position: relative;
+  display: inline-block;
+  width: 360px;
+  padding-left: 40px;
+  height: 80px;
+  line-height: 80px;
+  letter-spacing: 2px;
+  border: 1px solid #a0a0a0;
+  background: #fff;
+  font-size: 20px;
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    border-radius: 2px;
+  }
+  &::before {
+    top: 30px;
+    left: 85px;
+    width: 30px;
+    height: 20px;
+    border: 1px solid #2b2b2b;
+  }
+  &::after {
+    top: 21px;
+    left: 90px;
+    width: 20px;
+    height: 20px;
+    border-right: 1px solid #2b2b2b;
+    border-bottom: 1px solid #2b2b2b;
+    transform: rotate(45deg);
+  }
+}
+
+// Footer
+.footer {
+  width: 100%;
+  text-align: center;
+  &__copyright {
+    line-height: 40px;
+    letter-spacing: 1.4px;
+  }
+}
